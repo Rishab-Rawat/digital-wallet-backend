@@ -1,4 +1,4 @@
-# Digital Wallet Backend (Java + Spring Boot)
+## Digital Wallet Backend (Java + Spring Boot)
 
 A learning/reference implementation of a ledger-backed INR wallet. Built with Java 21, Spring Boot, PostgreSQL 16, JDBC and Flyway. The transfer path uses explicit SQL and row locks so the money movement is visible and auditable.
 
