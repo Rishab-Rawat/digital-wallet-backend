@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: digital-wallet
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/wallet}
+    username: ${SPRING_DATASOURCE_USERNAME:wallet}
+    password: ${SPRING_DATASOURCE_PASSWORD:wallet_dev_only}
+    hikari:
+      maximum-pool-size: 20
+      connection-timeout: 30000
+  flyway:
+    enabled: true
+  jackson:
+    default-property-inclusion: non_null
+server:
+  port: ${PORT:8080}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+wallet:
+  seed-demo: ${WALLET_SEED_DEMO:false}
+  llm-mode: ${WALLET_LLM_MODE:mock}
+  reconciliation-cron: ${WALLET_RECONCILIATION_CRON:0 0 2 * * *}

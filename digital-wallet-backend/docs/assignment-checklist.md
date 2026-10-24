@@ -1,0 +1,24 @@
+# Assignment acceptance checklist
+
+- [x] PostgreSQL schema migration from empty database via Flyway.
+- [x] BIGINT paise; no floating point monetary values.
+- [x] Shared accounts table for wallets and system accounts.
+- [x] Double-entry transfer posting and immutable ledger trigger.
+- [x] Row locks acquired in ascending account ID order.
+- [x] Idempotency table, request hashing and saved response structure.
+- [x] Statement pagination newest first with stable ID tie-breaker.
+- [x] Scheduled and manual reconciliation; mismatch persistence and job lock.
+- [x] Configurable fraud rules, hold/release/reject path and risk flags.
+- [x] Statement Q&A uses parameterized database queries scoped by user account.
+- [x] Common JSON error shape.
+- [x] Docker Compose for PostgreSQL and API.
+- [x] Schema, isolation notes, Q&A sample cases, demo script.
+- [ ] Execute 20 × 100-concurrent-transfer acceptance test.
+- [ ] Execute idempotency replay and 10-parallel-retry acceptance tests.
+- [ ] Seed 1,000 users, 2,000 wallets, 100,000 transfers and verify reconciliation.
+- [ ] Verify exactly three expected problems after controlled corruption.
+- [ ] Run EXPLAIN ANALYZE against 1 million ledger entries and OFFSET 100,000.
+- [ ] Implement and test real LLM JSON parser/provider plus all ten numeric Q&A fixtures.
+- [ ] Implement reversal workflow and fee transfer workflow.
+- [ ] Add authentication/authorization before deployment.
+- [ ] Record and attach five-minute demo video.
